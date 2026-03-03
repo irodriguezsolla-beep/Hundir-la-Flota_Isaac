@@ -1,13 +1,14 @@
 class Nave:
-    def __init__(self, nombre, tamano):
+    def __init__(self, nombre, tamanho):
         self.nombre = nombre
-        self.vida = tamano
+        self.vida = tamanho
         self.hundido = False
-
+        self.TOCADO = 1
+        self.HUNDIDO = 2
     def recibir_disparo(self):
         self.vida -= 1
         if self.vida <= 0:
             self.hundido = True
-            print(f"¡El {self.nombre} ha sido hundido!")
+            return self.HUNDIDO
         else:
-            print(f"¡El {self.nombre} ha sido tocado! Vida restante: {self.vida}")
+            return self.TOCADO
