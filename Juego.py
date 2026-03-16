@@ -2,7 +2,12 @@ from tablero import Tablero
 class Juego:
     def __init__(self):
         self.tablero = Tablero()
-        self.lanzar_ataque(3,2)
+        self.lanzar_ataque(1, 1)
+        self.lanzar_ataque(1, 2)
+        self.lanzar_ataque(1, 3)
+        self.lanzar_ataque(1,4)
+        self.lanzar_ataque(1, 5)
+
 
     def mostrar_resultado(self, resultado):
         if resultado == 0:
